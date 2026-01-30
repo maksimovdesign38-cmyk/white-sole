@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Химчистка обуви</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- ✅ OVERLAY -->
+    <div class="overlay" id="overlay"></div>
+
+    <header class="header">
+      <div class="header-main">
+        <div class="header-left">
+          <div class="logo">Логотип</div>
+        </div>
+
+        <!-- ✅ ДЕСКТОП: Горизонтальное меню -->
+        <nav class="nav-desktop" id="navDesktop">
+          <a href="#about">О нас</a>
+          <a href="#services">Услуги</a>
+          <a href="#delivery">Доставка</a>
+          <a href="#terms">Условия</a>
+          <a href="#reviews">Отзывы</a>
+          <li class="nav-item cart-item">
+  <a href="#" class="nav-link">
+    <span>Корзина</span>
+    <span class="cart-badge">
+      <span class="cart-count">0</span>
+      <span class="cart-total">0 ₽</span>
+    </span>
+  </a>
+</li>
+        </nav>
+
+        <!-- ✅ МОБИЛЬНОЕ: Вертикальное меню (скрыто на десктопе) -->
+        <nav class="nav-mobile" id="navMobile">
+          <div class="menu-logo">
+            <div class="logo">Логотип</div>
+          </div>
+          <a href="#about">О нас</a>
+          <a href="#services">Услуги</a>
+          <a href="#delivery-block">Доставка</a>
+          <a href="#terms">Условия</a>
+          <a href="#reviews">Отзывы</a>
+          <!-- В мобильном меню тоже -->
+<li class="mobile-nav-item cart-item">
+  <a href="#" class="mobile-nav-link">
+    <span>Корзина</span>
+    <span class="cart-badge">
+      <span class="cart-count">0</span>
+      <span class="cart-total">0 ₽</span>
+    </span>
+  </a>
+</li>
+
+          <!-- ✅ Контакты в мобильном меню -->
+          <div class="mobile-contacts">
+            <div class="mobile-location-line" id="mobileLocationToggle">
+              <span class="location-emoji">📍</span>
+              <span id="mobileCity">г. Иркутск</span>
+              <span class="chevron">▼</span>
+            </div>
+            <div class="mobile-phone" id="mobilePhone">
+              📱 +7 (3952) 123-456
+            </div>
+            <div class="mobile-dropdown" id="mobileCityDropdown">
+              <a href="#" class="dropdown-item">Иркутск</a>
+              <a href="#" class="dropdown-item">Москва</a>
+              <a href="#" class="dropdown-item">Санкт-Петербург</a>
+              <a href="#" class="dropdown-item">Бишкек</a>
+            </div>
+          </div>
+        </nav>
+
+        <div class="header-right">
+          <div class="burger" id="burger">
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+          </div>
+
+          <!-- ✅ Десктоп контакты -->
+          <div class="header-contacts">
+  <!-- 1. Локация + Dropdown -->
+  <div class="location-line" id="locationToggle">
+    <svg class="location-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"/>
+      <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0"/>
+    </svg>
+    <span class="city-name" id="cityName">г. Иркутск</span>
+    <span class="chevron">▼</span>
+  </div>
+  
+  <!-- 2. Dropdown (скрытый) -->
+  <div class="dropdown" id="cityDropdown">
+  <a href="#" class="dropdown-item" data-city="Иркутск">Иркутск</a>
+  <a href="#" class="dropdown-item" data-city="Москва">Москва</a>
+  <a href="#" class="dropdown-item" data-city="Санкт-Петербург">Санкт-Петербург</a>
+  <a href="#" class="dropdown-item" data-city="Бишкек">Бишкек</a>
+</div>
+
+<!-- 3. Телефон + Соцсети -->
+<div class="phone-line">
+  <span class="phone-number" id="phoneSpan">+7 (3952) 123-456</span>
+  
+  <!-- Telegram -->
+  <a href="https://t.me/yourlink" class="social-icon telegram" aria-label="Telegram" target="_blank">
+    <img src="icon/telegram.svg" alt="Telegram" class="social-img">
+  </a>
+  
+  <!-- WhatsApp -->
+  <a href="https://wa.me/7952123456" class="social-icon whatsapp" aria-label="WhatsApp" target="_blank">
+    <img src="icon/whatsup.svg" alt="WhatsApp" class="social-img">
+  </a>
+</div>
+</div>
+    </header>
+
+    <main class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">Химчистка обуви</h1>
+        <div class="badges">
+          <span class="badge">Чистка</span>
+          <span class="badge">Ремонт</span>
+          <span class="badge">Восстановление</span>
+        </div>
+        <p class="hero-subtitle">Оформить бесплатного курьера</p>
+        <button class="hero-button">Оформить заказ</button>
+      </div>
+
+      <div class="hero-slider">
+        <div class="slider-container">
+          <div class="dirty-shoe"></div>
+          <div class="clean-shoe"></div>
+          <div class="slider-handle"></div>
+        </div>
+      </div>
+    </main>
+
+    <section class="services">
+      <div class="container">
+        <h2 class="services-title">Популярные услуги</h2>
+        <div class="services-carousel">
+          <div class="carousel-track" id="carouselTrack"></div>
+          <button class="carousel-prev" id="prevBtn">‹</button>
+          <button class="carousel-next" id="nextBtn">›</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ✅ БЛОК "О НАС" -->
+    <section class="about" id="about">
+      <div class="container">
+        <div class="about-wrapper">
+          <!-- Левая колонка — текст -->
+          <div class="about-text">
+            <h2 class="about-title">О нас</h2>
+            <h3 class="about-city-title" id="aboutCityTitle">
+              Лучшая химчистка обуви в Иркутске
+            </h3>
+            <p class="about-mission">
+              Наша миссия — сделать мир чище.<br /><strong>Во всем.</strong>
+            </p>
+            <p class="about-stats">
+              4 года на рынке и почистили более 15 000 пар обуви
+            </p>
+            <p class="about-services">
+              Чистим/красим/ремонтируем обувь и сумки. Бесплатный курьер по
+              городу от 1 пары
+            </p>
+
+            <div class="about-challenge">
+              <p class="about-question">Сможем!</p>
+              <p class="about-story">
+                Очень часто к нам обращаются с вопросом «Сможете сделать? Никто
+                не берется»
+              </p>
+              <p class="about-answer">Да!</p>
+              <p class="about-motto">
+                Мы беремся за самые сложные задачи, чтобы оживить ваши вещи.
+              </p>
+              <p class="about-why">
+                <strong>Зачем нам это?</strong><br />Так мы развиваем наш
+                профессионализм и улучшаем сервис.
+              </p>
+            </div>
+          </div>
+
+          <!-- Правая колонка — фотогалерея -->
+          <div class="about-gallery">
+            <div class="gallery-container">
+              <div class="gallery-track" id="galleryTrack"></div>
+              <button class="gallery-prev" id="galleryPrev">‹</button>
+              <button class="gallery-next" id="galleryNext">›</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ✅ БЛОК УСЛУГИ И ЦЕНЫ -->
+    <section class="services-prices" id="services">
+      <div class="container">
+        <h2 class="services-prices-title">Услуги и цены</h2>
+        <div class="services-grid" id="servicesGrid"></div>
+      </div>
+    </section>
+
+    <!-- ✅ БЛОК "КАК МЫ РАБОТАЕМ" -->
+    <section class="how-we-work" id="terms">
+      <div class="container">
+        <div class="how-we-work-content">
+          <!-- Левая часть — текст -->
+          <div class="how-we-work-text">
+            <h2 class="how-title">Как мы работаем</h2>
+
+            <div class="step">
+              <h3 class="step-title">1. Оформляете заказ</h3>
+              <p class="step-desc">
+                Заказ оформляется в любом удобном вам месте
+                (Direct/Telegram/WhatsApp/Сайт) с менеджером. Указываете свои
+                контактные данные и удобное время забора и оплаты.
+              </p>
+            </div>
+
+            <div class="step">
+              <h3 class="step-title">2. Отдаете курьеру</h3>
+              <p class="step-desc">
+                Курьер приезжает в удобное для вас время и место и забирает ваш
+                заказ.
+              </p>
+            </div>
+
+            <div class="step">
+              <h3 class="step-title">3. Получение заказа</h3>
+              <p class="step-desc">
+                По готовности, мы присылаем вам фото результата для
+                согласования. Затем договариваемся на удобное время и место
+                доставки готового заказа обратно.
+              </p>
+              <a href="#order" class="order-btn"> Оформить заказ </a>
+            </div>
+          </div>
+
+          <!-- Правая часть — таблица -->
+          <div class="how-we-work-table">
+            <div class="table-top">
+              <div class="table-top-text">Средний срок работы 5-7 дней</div>
+            </div>
+
+            <div class="table-grid">
+              <div class="table-cell purple">
+                <h4 class="cell-title">Сложность загрязнения</h4>
+                <p class="cell-desc">
+                  Бывают случаи, когда необходимо выполнить несколько повторных
+                  циклов чистки, чтобы добиться наилучшего результата.
+                  Дополнительно оплачивать повторные чистки не нужно.
+                </p>
+              </div>
+
+              <div class="table-cell pink">
+                <h4 class="cell-title">Материалы</h4>
+                <p class="cell-desc">
+                  Заказы сушатся естественным образом при правильной
+                  температуре. Срок высыхания каждого материала индивидуален,
+                  например, кожа сохнет гораздо быстрее, чем ткань или мех.
+                </p>
+              </div>
+
+              <div class="table-cell blue">
+                <h4 class="cell-title">Покраска</h4>
+                <p class="cell-desc">
+                  Перед любой покраской обязательно выполняется чистка, что
+                  занимает время. Полное высыхание краски занимает до 24ч.
+                </p>
+              </div>
+
+              <div class="table-cell violet">
+                <h4 class="cell-title">Большой объем работы</h4>
+                <p class="cell-desc">
+                  Например, вам необходимо не только почистить, но и покрасить,
+                  установить профилактику и заплатки на задники, а также
+                  прошить. Все это выполняется поэтапно, что может увеличить
+                  срок работы.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ✅ БЛОК "ДОСТАВКА ПО ГОРОДУ" -->
+    <section class="delivery-block" id="delivery">
+      <div class="container">
+        <div class="delivery-content">
+          <div class="delivery-image">
+            <div class="delivery-text-overlay">
+              <h3 class="delivery-title">Доставка по Москве</h3>
+              <p class="delivery-desc">
+                Бесплатная курьерская доставка от одной пары (или от 3750 р.) в
+                пределах МКАД, т.е. курьер бесплатно заберёт вашу обувь и
+                доставит обратно.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ✅ МОДАЛЬНОЕ ОКНО ГАЛЕРЕИ -->
+    <div class="modal-gallery" id="modalGallery">
+      <div class="modal-overlay" id="modalOverlay"></div>
+      <div class="modal-content">
+        <button class="modal-close" id="modalClose">×</button>
+        <button class="modal-prev" id="modalPrev">‹</button>
+        <button class="modal-next" id="modalNext">›</button>
+        <div class="modal-track" id="modalTrack"></div>
+      </div>
+    </div>
+
+    <!-- ✅ БЛОК "АКЦИИ" -->
+    <section class="promotions" id="promotions">
+      <div class="container">
+        <h2 class="promotions-title">Акции</h2>
+
+        <div class="promotions-grid">
+          <!-- Акция 1 -->
+          <div class="promo-card purple">
+            <div class="promo-icon">
+              <img src="./icon/shoo.svg" alt="Обувь" class="promo-svg">
+            </div>
+            <h3 class="promo-title">6-я пара БЕСПЛАТНО*</h3>
+            <p class="promo-desc">
+              При сдаче пяти пар обуви шестая чистится бесплатно
+            </p>
+            <div class="promo-note">
+              *бесплатной чисткой считается самый минимальный тариф
+            </div>
+          </div>
+
+          <!-- Акция 2 -->
+          <div class="promo-card pink">
+            <div class="promo-icon">
+              <img src="./icon/24.svg" alt="24 часа" class="promo-svg">
+            </div>
+            <h3 class="promo-title">-10% за сторис</h3>
+            <p class="promo-desc">За отметку в сторис на 24 ч</p>
+            <div class="promo-note">*скидка распространяется на весь заказ</div>
+          </div>
+        </div>
+
+        <div class="promotions-cta">
+         
+      </div>
+    </section>
+
+    
+
+    <!-- ✅ БЛОК ОТЗЫВЫ -->
+<section class="reviews" id="reviews">
+  <div class="container">
+    <h2 class="reviews-title">Ваши отзывы</h2>
+    <div class="reviews-carousel">
+      <div class="reviews-track" id="reviewsTrack">
+        <!-- Картинки будут добавлены JS -->
+      </div>
+      <button class="reviews-prev" id="reviewsPrev">‹</button>
+      <button class="reviews-next" id="reviewsNext">›</button>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="faq-wrapper">
+    <div class="faq-content">
+      <h2 class="faq-title">Часто задаваемые вопросы</h2>
+      
+      <div class="faq-accordion">
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Можно ли привезти самому?</span>
+            <span class="faq-plus">+</span>
+          </div>
+          <div class="faq-answer">
+            Да, можно привезти обувь самостоятельно в наш пункт выдачи в центре Иркутска. 
+            Работает ежедневно с 10:00 до 20:00. Адрес: ул. Ленина, 15.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>За пределами бесплатной зоны забираете?</span>
+            <span class="faq-plus">+</span>
+          </div>
+          <div class="faq-answer">
+            Да, выезжаем за пределы бесплатной зоны (до 10 км от центра) за 500₽. 
+            Более 10 км — 50₽/км. Точную стоимость рассчитаем по вашему адресу.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Вы работаете только с белыми кроссовками?</span>
+            <span class="faq-plus">+</span>
+          </div>
+          <div class="faq-answer">
+            Нет, чистим любую обувь: кроссовки, кеды, кожаные туфли, замшевые ботинки. 
+            Белые кроссовки — наша специализация, но работаем со всей обувью.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Что входит в чистку?</span>
+            <span class="faq-plus">+</span>
+          </div>
+          <div class="faq-answer">
+            Полная чистка: удаление грязи, пятен, дезодорация, пропитка защитой от воды, 
+            чистка шнурков и стелек. При необходимости — реставрация подошвы.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>От чего зависит стоимость работы?</span>
+            <span class="faq-plus">+</span>
+          </div>
+          <div class="faq-answer">
+            От материала (кожа/ткань/замша), степени загрязнения, сложности пятен, 
+            срочности. Базовая чистка кроссовок — от 1500₽.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Какой срок чистки?</span>
+            <span class="faq-plus">+</span>
+          </div>
+          <div class="faq-answer">
+            Стандарт — 1-3 дня. Срочная чистка — 4 часа (+50% к стоимости). 
+            В выходные — до 5 дней.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Как происходит оплата?</span>
+            <span class="faq-plus">+</span>
+          </div>
+          <div class="faq-answer">
+            Оплата после осмотра обуви и согласования цены. Принимаем наличные, 
+            карты, СБП. Предоплата только при срочной чистке (50%).
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Какие гарантии?</span>
+            <span class="faq-plus">+</span>
+          </div>
+          <div class="faq-answer">
+            14 дней гарантии на чистку. Если результат не устроит — переделаем бесплатно. 
+            5+ лет на рынке, 2000+ довольных клиентов.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Вы забираете обувь и просите полную предоплату. А если вы исчезнете?</span>
+            <span class="faq-plus">+</span>
+          </div>
+          <div class="faq-answer">
+            Предоплата только 30% при выезде курьером. Остаток — после возврата чистой 
+            обуви. Есть договор, ИП зарегистрировано, отзывы 4.9/5 на Яндекс.Картах.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Что делать, если мне не понравится результат?</span>
+            <span class="faq-plus">+</span>
+          </div>
+          <div class="faq-answer">
+            Бесплатная доработка в течение 14 дней. Если не устраивает совсем — 
+            вернём предоплату и обувь. 98% клиентов довольны с первого раза!
+          </div>
+        </div>
+      </div>
+      
+      <a href="#contacts" class="order-btn">
+        Связаться с нами
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+          <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </a>
+    </div>
+    
+    <div class="faq-image">
+      <img src="./img/FAQ.png" alt="Чистка обуви" class="faq-img">
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <img src="./img/logo-dark.svg" alt="Белая подошва" class="logo-dark">
+    </div>
+    
+    <div class="footer-grid">
+      <!-- Колонка 1: Контакты -->
+      <div class="footer-column">
+        <h3 class="footer-title">Контакты</h3>
+        <div class="footer-text">
+          8-800-77-07-999<br>
+          <small>(с 08:00 до 03:00)</small>
+        </div>
+        <div class="footer-text">gezoubozolou-3655@yopmail.com</div>
+        <a href="#contacts" class="footer-btn">Написать нам</a>
+      </div>
+
+      <!-- Колонка 2: Города -->
+      <div class="footer-column">
+        <h3 class="footer-title">Города</h3>
+        <div class="footer-text">
+          Москва, Санкт-Петербург,<br>
+          Бишкек, Иркутск.
+        </div>
+      </div>
+
+      <!-- Колонка 3: Меню -->
+      <div class="footer-column">
+        <h3 class="footer-title">Меню</h3>
+        <div class="footer-text">
+          О нас, Услуги,<br>
+          Доставка, Условия,<br>
+          Магазин, Отзывы.
+        </div>
+      </div>
+
+      <!-- Колонка 4: Соцсети -->
+      <div class="footer-column">
+        <h3 class="footer-title">Соцсети</h3>
+        <div class="footer-socials">
+          <a href="#" class="social-link" aria-label="Telegram">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+            </svg>
+          </a>
+          <a href="#" class="social-link" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994 9.844 9.844 0 0 1-1.745 4.842l-.341.38-1.998-1.006z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer-divider"></div>
+  <div class="footer-bottom">
+    <p class="copyright">© 2023 "Белая подошва"</p>
+  </div>
+</footer>
+
+
+<!-- ✅ КОРЗИНА SLIDE-IN -->
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-header">
+    <h2>🛒 Корзина</h2>
+    <span class="cart-item-count" id="cartItemCount">0</span>
+    <button class="cart-close" id="cartClose">×</button>
+  </div>
+  
+  <div class="cart-items" id="cartItems">
+    <!-- Сюда добавляются товары JS -->
+  </div>
+  
+  <div class="cart-empty" id="cartEmpty">
+    <div class="empty-icon">🧹</div>
+    <h3>Корзина пуста</h3>
+    <p>Добавьте услуги чистки в корзину</p>
+  </div>
+  
+  <div class="cart-footer" id="cartFooter">
+    <div class="cart-total-row">
+      <span>Итого:</span>
+      <span class="cart-total-price" id="cartTotalPrice">0 ₽</span>
+    </div>
+    <button class="cart-checkout-btn" id="checkoutBtn" disabled>
+      Оформить заказ
+    </button>
+  </div>
+</div>
+
+
+<!-- ✅ МОДАЛКА ОФОРМЛЕНИЯ ЗАКАЗА -->
+<div class="order-modal" id="orderModal">
+  <div class="order-modal-overlay" id="orderOverlay"></div>
+  <div class="order-modal-content">
+    <div class="order-header">
+      <h2>📋 Оформить заказ</h2>
+      <span class="cart-count order-count" id="orderCount">0</span>
+      <button class="modal-close" id="orderClose">×</button>
+    </div>
+    
+    <div class="order-form">
+      <!-- Город (подтягивается из профиля) -->
+      <div class="form-group">
+        <label>Город</label>
+        <div class="city-select" id="orderCity">
+          <span class="city-name" id="selectedCity">Иркутск</span>
+          <span class="chevron">▼</span>
+        </div>
+        <div class="city-dropdown" id="orderCityDropdown">
+          <div class="dropdown-item" data-city="Иркутск">Иркутск</div>
+          <div class="dropdown-item" data-city="Москва">Москва</div>
+          <div class="dropdown-item" data-city="Санкт-Петербург">Санкт-Петербург</div>
+          <div class="dropdown-item" data-city="Бишкек">Бишкек</div>
+        </div>
+      </div>
+
+      <!-- Телефон (подтягивается из профиля) -->
+      
+  <label>Телефон <span class="optional"></span></label>
+  <input 
+    type="tel" 
+    id="orderPhone" 
+    placeholder="+7 (___) ___-__-__"
+    pattern="\+?[7|8]{1}[\s\-\(\)]?[\d]{3}[\s\-\(\)]?[\d]{3}[\s\-\(\)]?[\d]{2}[\s\-\(\)]?[\d]{2}"
+  >
+  <small class="phone-hint">Предпочтительно WhatsApp</small>
+</div>
+
+      <!-- Время забора -->
+      <div class="form-group">
+        <label>Удобное время забора</label>
+        <input type="datetime-local" id="pickupTime" required>
+      </div>
+
+      <!-- ✅ ПОЖЕЛАНИЯ (НОВОЕ ПОЛЕ) -->
+      <div class="form-group">
+        <label>💬 Пожелания к заказу</label>
+        <textarea 
+          id="orderWishes" 
+          placeholder="Срочная чистка белых кроссовок. Проверить пятна на подошве. Супер результат!"
+          rows="4"
+          maxlength="500"
+        ></textarea>
+        <small class="char-count">0/500 символов</small>
+      </div>
+    </div>
+
+    <div class="order-total">
+      <div class="total-row">
+        <span>Итого:</span>
+        <span class="total-price" id="orderTotal">0 ₽</span>
+      </div>
+    </div>
+
+    <div class="order-actions">
+      <button class="order-confirm-btn" id="confirmOrder" disabled>
+        Заказать курьера бесплатно
+      </button>
+      <button class="order-cancel-btn" id="cancelOrder">
+        Назад к покупкам
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ✅ БЫСТРАЯ МОДАЛКА (добавьте ПЕРЕД закрывающим </body>) -->
+<div class="quick-order-modal" id="quickOrderModal">
+  <div class="quick-order-overlay" id="quickOrderOverlay"></div>
+  <div class="quick-order-content">
+    <div class="quick-order-header">
+      <h2>📋 Быстрое оформление</h2>
+      <button class="modal-close" id="quickOrderClose">×</button>
+    </div>
+    
+    <div class="quick-order-form">
+      <div class="form-group">
+        <label>Город</label>
+        <div class="city-select" id="quickCity">
+          <span class="city-name" id="quickSelectedCity">Иркутск</span>
+          <span class="chevron">▼</span>
+        </div>
+        <div class="city-dropdown" id="quickCityDropdown">
+          <div class="dropdown-item" data-city="Иркутск">Иркутск</div>
+          <div class="dropdown-item" data-city="Москва">Москва</div>
+          <div class="dropdown-item" data-city="Санкт-Петербург">Санкт-Петербург</div>
+          <div class="dropdown-item" data-city="Бишкек">Бишкек</div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>📱 Телефон</label>
+        <input type="tel" id="quickPhone" placeholder="+7 (___) ___-__-__" required>
+        <small>Предпочтительно WhatsApp</small>
+      </div>
+
+      <div class="form-group">
+        <label>📍 Адрес забора</label>
+        <input type="text" id="quickAddress" placeholder="ул. Ленина, 15" required>
+      </div>
+
+      <div class="form-group">
+        <label>📅 Время забора</label>
+        <input type="datetime-local" id="quickPickupTime" required>
+      </div>
+
+      <div class="form-group">
+        <label>💬 Пожелания (что чистить)</label>
+        <textarea id="quickWishes" rows="4" maxlength="500" 
+          placeholder="2 пары кроссовок, белые кеды, замшевые ботинки..."></textarea>
+        <small class="char-count">0/500 символов</small>
+      </div>
+    </div>
+
+    <div class="quick-order-actions">
+      <button class="quick-order-confirm" id="quickConfirmOrder">
+        Заказать курьера бесплатно
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="quick-order-modal" id="quickOrderModal" style="display: none;">
+  <div class="quick-order-overlay" id="quickOrderOverlay"></div>
+  <div class="quick-order-content">
+    <h2>Быстрое оформление</h2>
+    <input id="quickPhone" placeholder="Телефон">
+    <input id="quickAddress" placeholder="Адрес">
+    <input type="datetime-local" id="quickPickupTime">
+    <textarea id="quickWishes" placeholder="Что чистить?"></textarea>
+    <button id="quickConfirmOrder">Заказать</button>
+    <button id="quickOrderClose">Закрыть</button>
+  </div>
+</div>
+
+
+
+    <script src="script.js"></script>
+  </body>
+</html>
